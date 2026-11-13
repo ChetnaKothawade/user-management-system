@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>User Management System</h1>
+
+        <section class="card">
+            <h2 id="formTitle">Add New User</h2>
+            <form id="userForm">
+                <input type="hidden" id="userId">
+
+                <label for="name">Name</label>
+                <input id="name" type="text" maxlength="100"
+                       placeholder="Enter your name" required>
+
+                <label for="email">Email</label>
+                <input id="email" type="email" maxlength="150"
+                       placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number</label>
+                <input id="phone" type="tel" inputmode="numeric"
+                       maxlength="10" pattern="[0-9]{10}"
+                       placeholder="Enter 10-digit phone number" required>
+
+                <div class="form-actions">
+                    <button type="submit" id="saveButton">Add User</button>
+                    <button type="button" class="secondary" id="clearButton">Clear</button>
+                </div>
+                <p id="message" role="status"></p>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>All Users</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTable">
+                        <tr><td colspan="5">Loading users...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

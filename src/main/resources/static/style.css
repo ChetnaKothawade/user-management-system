@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    background: #f3f5f8;
+    color: #222;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.card {
+    background: #fff;
+    padding: 22px;
+    margin-bottom: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd0d8;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+button {
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 14px;
+    background: #1769aa;
+    color: white;
+    cursor: pointer;
+    margin: 2px;
+}
+
+button:hover {
+    opacity: 0.88;
+}
+
+button.secondary {
+    background: #68737d;
+}
+
+button.edit {
+    background: #218838;
+}
+
+button.delete {
+    background: #c82333;
+}
+
+.form-actions {
+    display: flex;
+    gap: 8px;
+}
+
+#message {
+    min-height: 20px;
+    margin: 4px 0 0;
+}
+
+#message.error {
+    color: #c82333;
+}
+
+#message.success {
+    color: #218838;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #d9dee5;
+    text-align: left;
+}
+
+th {
+    background: #1769aa;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background: #f7f9fb;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
